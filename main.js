@@ -88,7 +88,7 @@ function animate() {
 
 
         //Modo pantalla TV
-        /* if (x <= 90) {
+        if (x <= 90) {
           pixels[loc] = pixels[loc];
           pixels[loc + 1] = pixels[loc + 1];
           pixels[loc + 2] = pixels[loc + 2] + 120;
@@ -120,7 +120,7 @@ function animate() {
           pixels[loc] = pixels[loc];
           pixels[loc + 1] = pixels[loc + 1];
           pixels[loc + 2] = 150;
-        } */
+        }
 
         
 
@@ -131,7 +131,7 @@ function animate() {
     
 
     // Manipular los píxeles de la imagen
-    const distLimit = 200;
+    /* const distLimit = 200;
     for (let x = 0; x < canvas.width; x++) {
       for (let y = 0; y < canvas.height; y++) {
         const loc = (x + y * canvas.width) * 4;
@@ -144,7 +144,7 @@ function animate() {
         pixels[loc + 2] *= factor;
         
       }
-    }
+    } */
   
     // Actualizar los píxeles en el lienzo
     ctx.putImageData(imageData, 0, 0);
