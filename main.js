@@ -44,6 +44,10 @@ canvas.addEventListener('mousemove', function(event){
   mouseY = event.clientY;
 });
 
+canvas.addEventListener('touchmove', function(event){
+  mouseX = event.touches[0].clientX;
+  mouseY = event.touches[0].clientY;
+});
 
 // Función para animar y manipular los píxeles de la imagen
 function animate() {
