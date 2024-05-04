@@ -1,4 +1,4 @@
-/** @type HTMLCanvasElement */
+/* /** @type HTMLCanvasElement */
 const canvas = document.getElementById('canvas1');
 /** @type CanvasRenderingContext2D */
 const ctx = canvas.getContext('2d');
@@ -14,6 +14,8 @@ imagePhoto.src = 'assets/Ro.jpeg';
 // Variable para controlar si la imagen se ha cargado completamente
 let imgLoaded = false;
 
+let w = 20;
+let h = 20;
 
 let mouseX, mouseY;
 
@@ -73,10 +75,10 @@ function animate() {
         const r = pixels[loc];
         const g = pixels[loc + 1];
         const b = pixels[loc + 2];
-        // Calcular la luminosidad del píxel
+        /* // Calcular la luminosidad del píxel
         const pixelBrightness = brightness(r, g, b);
         // Comparar con la posición X del ratón
-        /* if (pixelBrightness > mouseX) {
+        if (pixelBrightness > mouseX) {
           pixels[loc] = 255;
           pixels[loc + 1] = 0;
           pixels[loc + 2] = 0;
@@ -84,11 +86,16 @@ function animate() {
           pixels[loc] = 0;
           pixels[loc + 1] = 0;
           pixels[loc + 2] = 0;
-        } */
+        }  */
+
+        
+
+      
+        
 
 
         //Modo pantalla TV
-        if (x <= 90) {
+        /* if (x <= 90) {
           pixels[loc] = pixels[loc];
           pixels[loc + 1] = pixels[loc + 1];
           pixels[loc + 2] = pixels[loc + 2] + 120;
@@ -120,7 +127,7 @@ function animate() {
           pixels[loc] = pixels[loc];
           pixels[loc + 1] = pixels[loc + 1];
           pixels[loc + 2] = 150;
-        }
+        } */
 
         
 
@@ -131,7 +138,7 @@ function animate() {
     
 
     // Manipular los píxeles de la imagen
-    /* const distLimit = 200;
+    const distLimit = 200;
     for (let x = 0; x < canvas.width; x++) {
       for (let y = 0; y < canvas.height; y++) {
         const loc = (x + y * canvas.width) * 4;
@@ -144,7 +151,7 @@ function animate() {
         pixels[loc + 2] *= factor;
         
       }
-    } */
+    }
   
     // Actualizar los píxeles en el lienzo
     ctx.putImageData(imageData, 0, 0);
@@ -258,4 +265,5 @@ animate();
     }
   }
   animate();
-} */
+} */ 
+
